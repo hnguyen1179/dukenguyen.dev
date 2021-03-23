@@ -1,0 +1,68 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+
+  @include on-event {
+    color: $text-color;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f100; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(235, 87, 1); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7c7c7c; 
+}
+
+::-webkit-scrollbar-track-piece:end {
+  margin-bottom: 1rem;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track-piece:start {
+  margin-top: 1rem;
+  background: transparent;
+}
+
+@media screen and (max-width: 750px) {
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  ::-webkit-scrollbar-track-piece:end {
+    margin-bottom: 0rem;
+  }
+  ::-webkit-scrollbar-track-piece:start {
+    margin-top: 0rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  ::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+}

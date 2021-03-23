@@ -1,0 +1,22 @@
+.Contact {
+    background-color: #e6e1db;
+
+    &__main {
+        color: $contact-color-2;
+        width: min(750px, 90%);
+
+        &__cta {
+            font-size: clamp(1.4rem, 0.8667rem + 2.3704vw, 3rem);
+
+            a {
+                color: $contact-color-2;
+                transition: 350ms ease-in-out;
+
+                &:hover {
+                    color: white;
+                    transition: 350ms ease-in-out;
+                }
+            }
+        }
+    }
+}

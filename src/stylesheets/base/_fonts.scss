@@ -1,0 +1,22 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+@font-face {
+  font-family: 'NeueMontreal-Regular';
+  src: local('NeueMontreal-Regular'), url('../../fonts/NeueMontreal-Regular.otf') format('opentype');
+  font-weight: normal; 
+}
+
+@font-face {
+  font-family: 'NeueMontreal-Bold';
+  src: local('NeueMontreal-Bold'), url('../../fonts/NeueMontreal-Bold.otf') format('opentype');
+  font-weight: bold; 
+}
+
+@font-face {
+  font-family: 'MoristonPersonal-Black';
+  src: local('MoristonPersonal-Black'), url('../../fonts/MoristonPersonal-Black.otf') format('opentype');
+  font-weight: bold;
+}
+

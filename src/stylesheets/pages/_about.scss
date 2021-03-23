@@ -1,0 +1,21 @@
+.About {
+  background-color: #e9e2d3;
+
+  &__main {
+    color: $about-color-2;
+    font-family: $paragraphFont;
+    width: min(800px, 100%);
+
+    &__paragraphs {
+
+      &__paragraph {
+        font-size: clamp(1.05rem, 0.8333rem + 0.9630vw, 1.7rem);        
+        margin-bottom: 1.25rem;
+      }
+    }
+  }
+}
+
+.emphasize {
+  color: rgb(41, 5, 5);
+}

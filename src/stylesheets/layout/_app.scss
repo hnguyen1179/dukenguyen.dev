@@ -1,0 +1,39 @@
+.App {
+  width: 100vw;
+
+  &__bar {
+    z-index: 100;
+    background: white;
+    position: fixed;
+
+    &--top {
+      top: 0;
+      width: 100%;
+      height: 1rem;
+    }
+
+    &--bottom {
+      bottom: 0;
+      width: 100%;
+      height: 1rem;
+    }
+
+    &--left {
+      left: 0;
+      height: 100%;
+      width: 1rem;
+    }
+    
+    &--right {
+      right: 0;
+      height: 100%;
+      width: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .App__bar {
+    display: none;
+  }
+}

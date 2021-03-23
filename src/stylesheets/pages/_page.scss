@@ -1,0 +1,19 @@
+.page {
+  padding: 1rem;
+  padding-top: max(130px, 12.5%);
+  padding-left: 12.5%;
+  padding-right: calc(12.5% - 1rem);
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  
+  &__content {
+    // padding: 0 16.3%;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .page {
+    padding-left: 3%;
+  }
+}

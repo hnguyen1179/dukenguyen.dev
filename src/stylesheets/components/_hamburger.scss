@@ -1,0 +1,40 @@
+.Hamburger {
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+
+  &.show &__lineOne { 
+    transform: rotate(45deg) translateY(250%);
+  } 
+
+  &.show &__lineTwo { 
+    transform: rotate(-225deg) translateY(250%);
+  } 
+  
+  &__lineOne,
+  &__lineTwo {
+    display: block;
+    height: 0.20rem;
+    width: 2rem;
+    background: black;
+    transition: 300ms;
+  }
+
+  &:hover &__lineOne,
+  &:hover &__lineTwo {
+    transition: 300ms;
+    background: $main-color;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .Hamburger {
+    &__lineOne,
+    &__lineTwo {
+      background: black;
+    }
+  }
+}
