@@ -17,7 +17,7 @@ export default function Home() {
             src={homeData.images.nameSvg} 
           />
           <div className="image-container">
-            <img src={homeData.images.portrait} alt="picture of Duke Nguyen"/>
+            <img src={homeData.images.portrait} alt="Duke Nguyen Portrait"/>
           </div>
         </div>
       </div>

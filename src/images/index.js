@@ -9,8 +9,7 @@ import monkeWebm from './02.webm';
 import sevilleMp4 from './03.mp4';
 import sevilleWebm from './03.webm';
 
-
-export default {
+const images = {
   logo,
   nameSvg,
   sevilleMp4,
@@ -22,3 +21,5 @@ export default {
   portrait,
   resume
 }
+
+export default images;

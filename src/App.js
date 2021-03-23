@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Switch, Route, useLocation, Redirect } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
@@ -24,8 +24,7 @@ import {
 import './components/FontAwesomeIcons';
 import './stylesheets/main.scss';
 
-export default function App(props) {
-  const [darkMode, setDarkMode] = useState(false);
+export default function App() {
   const location = useLocation();
 
   return (
