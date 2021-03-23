@@ -6,6 +6,10 @@ import Hamburger from './Hamburger';
 export default function Navigation({ headerData }) {
   const [showNav, setShowNav ] = useState(false);
 
+  const handlePreventBodyClick = (e) => {
+    e.stopPropagation();
+  }
+
   const handleClickLink = (e) => {
     e.stopPropagation();
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -53,6 +57,7 @@ export default function Navigation({ headerData }) {
     <div className="Header__navigation">
       <nav 
         className={`Header__navigation__links ${showNav && 'show'}`} 
+        onClick={handlePreventBodyClick}
       >
         <div className="overflow-container">
           {renderLinks}
@@ -60,6 +65,7 @@ export default function Navigation({ headerData }) {
       </nav>
       <nav 
         className={`Header__navigation__links--sidebar ${showNav && 'show'}`} 
+        onClick={handlePreventBodyClick}
       >
         <div className="Header__navigation__links--sidebar__container">
           {renderLinks}
