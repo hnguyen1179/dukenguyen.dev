@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Hidden from './pages/Hidden';
 
 import Header from './components/Header';
 
@@ -57,6 +58,7 @@ export default function App(props) {
               <Route path="/about" component={About} />
               <Route path="/projects" component={Projects} />
               <Route path="/contact" component={Contact} />
+              <Route path="/hidden" component={Hidden} />
               <Route render={() => <Redirect to="/" />} />
             </Switch>
           </CSSTransition>

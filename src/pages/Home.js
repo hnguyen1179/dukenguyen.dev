@@ -1,8 +1,7 @@
 import React, { useContext } from 'react';
-
 import Footer from '../components/Footer';
-
 import PortfolioContext from '../context/context';
+
 
 export default function Home() {
   const { homeData } = useContext(PortfolioContext);

@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
-import PortfolioContext from '../context/context';
-import Navigation from './Navigation';
 import { NavLink } from 'react-router-dom';
+
+import Navigation from './Navigation';
+
+import PortfolioContext from '../context/context';
 
 
 export default function Header() {
