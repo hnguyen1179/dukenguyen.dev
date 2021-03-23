@@ -27,7 +27,6 @@
       &::before, 
       &::after {
         @include bottom-bar;
-        height: 0.15rem;
       }
 
       &::before {

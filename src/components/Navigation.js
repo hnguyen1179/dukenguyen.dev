@@ -6,7 +6,8 @@ import Hamburger from './Hamburger';
 export default function Navigation({ headerData }) {
   const [showNav, setShowNav ] = useState(false);
 
-  const handleClickLink = () => {
+  const handleClickLink = (e) => {
+    e.stopPropagation();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
