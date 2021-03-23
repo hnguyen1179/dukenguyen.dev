@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/dukenguyen.dev/static/css/main.2368ee71.chunk.css",
+    "main.js": "/dukenguyen.dev/static/js/main.8bf91d92.chunk.js",
+    "main.js.map": "/dukenguyen.dev/static/js/main.8bf91d92.chunk.js.map",
+    "runtime-main.js": "/dukenguyen.dev/static/js/runtime-main.006c6fd8.js",
+    "runtime-main.js.map": "/dukenguyen.dev/static/js/runtime-main.006c6fd8.js.map",
+    "static/js/2.4d849ade.chunk.js": "/dukenguyen.dev/static/js/2.4d849ade.chunk.js",
+    "static/js/2.4d849ade.chunk.js.map": "/dukenguyen.dev/static/js/2.4d849ade.chunk.js.map",
+    "static/js/3.0ed4397e.chunk.js": "/dukenguyen.dev/static/js/3.0ed4397e.chunk.js",
+    "static/js/3.0ed4397e.chunk.js.map": "/dukenguyen.dev/static/js/3.0ed4397e.chunk.js.map",
+    "index.html": "/dukenguyen.dev/index.html",
+    "static/css/main.2368ee71.chunk.css.map": "/dukenguyen.dev/static/css/main.2368ee71.chunk.css.map",
+    "static/js/2.4d849ade.chunk.js.LICENSE.txt": "/dukenguyen.dev/static/js/2.4d849ade.chunk.js.LICENSE.txt",
+    "static/media/01.02b30523.webm": "/dukenguyen.dev/static/media/01.02b30523.webm",
+    "static/media/01.e52e9b38.mp4": "/dukenguyen.dev/static/media/01.e52e9b38.mp4",
+    "static/media/02.7cb72f24.mp4": "/dukenguyen.dev/static/media/02.7cb72f24.mp4",
+    "static/media/02.d5f260d8.webm": "/dukenguyen.dev/static/media/02.d5f260d8.webm",
+    "static/media/03.61aea7c3.mp4": "/dukenguyen.dev/static/media/03.61aea7c3.mp4",
+    "static/media/03.df4a2438.webm": "/dukenguyen.dev/static/media/03.df4a2438.webm",
+    "static/media/DukeNguyen.d57df107.svg": "/dukenguyen.dev/static/media/DukeNguyen.d57df107.svg",
+    "static/media/main.scss": "/dukenguyen.dev/static/media/NeueMontreal-Regular.140bfb4a.otf",
+    "static/media/duke-nguyen-portrait.325f7c8a.jpeg": "/dukenguyen.dev/static/media/duke-nguyen-portrait.325f7c8a.jpeg",
+    "static/media/duke-nguyen-resume.357375c5.pdf": "/dukenguyen.dev/static/media/duke-nguyen-resume.357375c5.pdf",
+    "static/media/logo512.7f6671fd.png": "/dukenguyen.dev/static/media/logo512.7f6671fd.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.006c6fd8.js",
+    "static/js/2.4d849ade.chunk.js",
+    "static/css/main.2368ee71.chunk.css",
+    "static/js/main.8bf91d92.chunk.js"
+  ]
+}
