@@ -4,7 +4,7 @@
 
 .Footer {
   width: 100%;
-  margin-top: 2rem;
+  margin-top: auto;
   margin-bottom: 5%;
   display: flex;
   justify-content: flex-start;
@@ -58,5 +58,11 @@
         color: rgb(255, 255, 255); 
       }
     }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Footer {
+    margin-bottom: 10%;
   }
 }

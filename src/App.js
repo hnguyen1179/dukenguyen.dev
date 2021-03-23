@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Switch, Route, useLocation } from 'react-router-dom';
+import { Switch, Route, useLocation, Redirect } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import Home from './pages/Home';
@@ -57,6 +57,7 @@ export default function App(props) {
               <Route path="/about" component={About} />
               <Route path="/projects" component={Projects} />
               <Route path="/contact" component={Contact} />
+              <Route render={() => <Redirect to="/" />} />
             </Switch>
           </CSSTransition>
         </TransitionGroup>

@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function Hamburger({ showNav, setShowNav }) {
+export default function Hamburger({ showNav, handleOpenNavigation }) {
   return (
-    <div className={`Hamburger ${showNav && 'show'}`} onClick={setShowNav}>
+    <div className={`Hamburger ${showNav && 'show'}`} onClick={handleOpenNavigation}>
       <span className="Hamburger__lineOne"/>
       <span className="Hamburger__lineTwo"/>
     </div>

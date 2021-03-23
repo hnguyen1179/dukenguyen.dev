@@ -11,10 +11,11 @@ const week = [
 export const currentDay = () => {
   const date = new Date();
   const hour = date.getHours();
+
   let timeOfDay;
-  if (hour < 12) {
+  if (hour <= 12) {
     timeOfDay = 'morning';
-  } else if (date < 18) {
+  } else if (hour <= 18) {
     timeOfDay = 'afternoon';
   } else {
     timeOfDay = 'night';

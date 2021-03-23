@@ -7,6 +7,7 @@
 
         &__cta {
             font-size: clamp(1.4rem, 0.8667rem + 2.3704vw, 3rem);
+            font-family: $paragraphFont;
 
             a {
                 color: $contact-color-2;
