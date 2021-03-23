@@ -16,7 +16,7 @@
 
   a {
     width: 5%;
-    min-width: 60px;
+    min-width: 45px;
     max-width: 100px;
   }
 
@@ -168,5 +168,6 @@
 @media screen and (max-width: 400px) {
   .Header {
     padding-left: 3%;
+    top: 0vh;
   }
 }
