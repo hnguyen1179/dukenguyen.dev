@@ -71,10 +71,6 @@
         color: $dark-grey;
         transition: 350ms;
       } 
-  
-      .link:last-child {
-        // margin-right: 0;
-      }
 
       .link::after,
       .link::before {
@@ -107,9 +103,10 @@
   }
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1160px) {
   .Header {
     padding-left: 3%;
+    padding-left: calc(12.5% - 54px);
   }
 }
 
