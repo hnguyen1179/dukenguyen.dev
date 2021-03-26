@@ -2,6 +2,7 @@ import uuidv1 from 'uuid/v1';
 import images from '../images'
 import { currentDay } from '../utility/day';
 
+
 // HEADER DATA
 export const headerData = {
   links: [
@@ -66,7 +67,7 @@ export const aboutData = {
   img: 'headshot-joe.png',
   paragraphs: [
     '<div>When I’m not <span class="emphasize">coding</span>, you can catch me adventuring in the outdoors! I enjoy <span class="emphasize">rock climbing, hiking and camping</span>. When it gets too cold, you can find me on the slopes <span class="emphasize">shredding powder</span> (greens/blues, not that good yet).</div>',
-    '<div>Outside of being outside, I enjoy <span class="emphasize">playing video games, listening to music and watching movies</span>. Some of my favorite games include classic JRPG’s like <span class="emphasize">Final Fantasy 9 and Xenogears</span>.  I’m a huge jazz fan, but will listen to anything that sounds good. I have too many favorite artists to name, but a few people I have been listening to recently include … (checks notes) <span class="emphasize">Sasami, Pharaoh Sanders and MF DOOM</span>.</div>', 
+    '<div>Outside of being outside, I enjoy <span class="emphasize">playing video games, listening to music and watching movies</span>. Some of my favorite games include classic JRPG’s like <span class="emphasize">Final Fantasy 9 and Xenogears</span>.  I’m a huge jazz fan, but will listen to anything that sounds good. I have too many favorite artists to name, but a few people I have been listening to recently include … (checks notes) <span class="emphasize">{artists}</span>.</div>', 
     '<div>I love a good Nolan film, <span class="emphasize">Interstellar</span> being one of my all time favorites. <span class="emphasize">Gattaca</span> is also up there in terms of movies for me. <span class="emphasize">Arthur C. Clarke</span>\'s novel, <span class="emphasize">Childhood\'s End</span>, is one of my favorite books. I like sci-fi if you couldn’t already tell.</div>'
   ]
 };

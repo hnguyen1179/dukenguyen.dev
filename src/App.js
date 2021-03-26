@@ -21,7 +21,6 @@ import {
   footerData 
 } from './mock/data'; 
 
-import './components/FontAwesomeIcons';
 import './stylesheets/main.scss';
 
 export default function App() {
