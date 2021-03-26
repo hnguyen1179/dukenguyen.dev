@@ -15,3 +15,13 @@
     padding-left: 3%;
   }
 }
+
+.Hidden {
+  background-color: rgb(234, 244, 250);
+
+  &__main {
+    h1, h2, h3 {
+      font-family: $titleFont;
+    }
+  }
+}

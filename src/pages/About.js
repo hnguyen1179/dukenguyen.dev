@@ -7,7 +7,7 @@ import APPController from '../utility/spotifyApi';
 
 export default function About() {
   const { aboutData } = useContext(PortfolioContext);
-  const [artists, setArtists] = useState('');
+  const [artists, setArtists] = useState('uhhhhh');
 
   useEffect(() => {
     const artists = APPController.getData()
