@@ -1,4 +1,4 @@
-import logo from './logo512.png';
+import logo from './qr-code.svg';
 import nameSvg from './DukeNguyen.svg';
 import portrait from './duke-nguyen-portrait.jpeg';
 import resume from './duke-nguyen-resume.pdf';

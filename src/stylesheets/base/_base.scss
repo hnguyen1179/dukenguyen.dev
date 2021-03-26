@@ -7,6 +7,12 @@ html {
   overflow-y: scroll;
 }
 
+@media screen and (max-width: 400px) {
+  html {
+    overflow-y: visible;
+  }
+}
+
 *,
 *::before,
 *::after {

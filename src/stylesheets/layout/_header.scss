@@ -153,6 +153,7 @@
 
             .link.activeLink {
               color: $main-color;
+              pointer-events: none;
             }
           }
         }
