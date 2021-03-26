@@ -12,7 +12,9 @@ export default function Contact() {
       <Title />
       <main className="Contact__main page__content">
         <h1 className="Contact__main__cta">
-          {contactData.cta1} <a href={`mailto: ${contactData.email}`}>{contactData.email}</a> {contactData.cta2}
+          {contactData.cta1} 
+          <a href={`mailto: ${contactData.email}`}>{contactData.email}</a> 
+          {contactData.cta2}
         </h1>
       </main>
       <Footer />
