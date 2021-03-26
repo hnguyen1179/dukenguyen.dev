@@ -10,16 +10,20 @@ export default function About() {
   const [artists, setArtists] = useState('uhhhhh');
 
   useEffect(() => {
-    const artists = APPController.getData()
-    artists.then(results => {
-      const threeArtists = new Set();
-      while (threeArtists.size < 3) {
-        const randomNum = Math.floor(Math.random() * results.length);
-        threeArtists.add(results[randomNum].track.artists[0].name);
-      }
-      const str = Array.from(threeArtists).join(', ')
-      setArtists(str);
-    })
+    try {
+      const artists = APPController.getData();
+      artists.then(results => {
+        const threeArtists = new Set();
+        while (threeArtists.size < 3) {
+          const randomNum = Math.floor(Math.random() * results.length);
+          threeArtists.add(results[randomNum].track.artists[0].name);
+        }
+        const str = Array.from(threeArtists).join(', ')
+        setArtists(str);
+      })
+    } catch(e) {
+      setArtists('uhhh, I can\'t think right now');
+    }
   }, [])
 
   return (
