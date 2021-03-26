@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.067d4933.chunk.css",
-    "main.js": "/static/js/main.e37bafa1.chunk.js",
-    "main.js.map": "/static/js/main.e37bafa1.chunk.js.map",
+    "main.js": "/static/js/main.f788e60b.chunk.js",
+    "main.js.map": "/static/js/main.f788e60b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.68fd6f18.js",
     "runtime-main.js.map": "/static/js/runtime-main.68fd6f18.js.map",
     "static/js/2.7c81e5a9.chunk.js": "/static/js/2.7c81e5a9.chunk.js",
@@ -22,12 +22,12 @@
     "static/media/main.scss": "/static/media/NeueMontreal-Regular.140bfb4a.otf",
     "static/media/duke-nguyen-portrait.325f7c8a.jpeg": "/static/media/duke-nguyen-portrait.325f7c8a.jpeg",
     "static/media/duke-nguyen-resume.357375c5.pdf": "/static/media/duke-nguyen-resume.357375c5.pdf",
-    "static/media/logo512.7f6671fd.png": "/static/media/logo512.7f6671fd.png"
+    "static/media/qr-code.d6705753.svg": "/static/media/qr-code.d6705753.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.68fd6f18.js",
     "static/js/2.7c81e5a9.chunk.js",
     "static/css/main.067d4933.chunk.css",
-    "static/js/main.e37bafa1.chunk.js"
+    "static/js/main.f788e60b.chunk.js"
   ]
 }
