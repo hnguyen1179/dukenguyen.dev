@@ -1,16 +1,44 @@
 .About {
-  background-color: #e9e2d3;
+  background-color: #eee7d7;
 
   &__main {
     color: $about-color-2;
     font-family: $paragraphFont;
-    width: min(650px, 100%);
+    width: min(700px, 100%);
 
     &__paragraphs {
+      
+      &__content {
 
-      &__paragraph {
-        font-size: clamp(1.05rem, 0.8333rem + 0.9630vw, 1.7rem);        
-        margin-bottom: 1.25rem;
+        &__paragraph {
+          font-size: clamp(1.05rem, 0.8333rem + 0.9630vw, 1.7rem);        
+          margin-bottom: 0.5rem;
+        }
+  
+        &__media {
+          margin-bottom: 2.5rem;
+          width: 95%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+          &--0 {
+            width: 100%;
+          }
+          
+          img {
+            box-sizing: border-box;
+            width: 45%;
+            margin: 1%;
+            border: 5px solid white;
+
+            &:first-child,
+            &:nth-child(3) {
+              margin-left: 0;
+            }
+          }
+        }
       }
     }
   }

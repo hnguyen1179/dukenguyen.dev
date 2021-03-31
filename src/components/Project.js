@@ -1,10 +1,7 @@
 import React from 'react';
-import ReactPlayer from 'react-player/file';
 
 export default function Project({ data }) {
   const { title, paragraphs, url, repo, images } = data;
-  console.log(images.webm)
-  console.log(images.mp4)
 
   return (
     <div className="Project">

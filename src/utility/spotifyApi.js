@@ -3,8 +3,8 @@ import axios from "axios";
 const APIController = (function() {
   const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
   const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
-  const LIMIT = 50;;
-  const OFFSET = Math.floor(Math.random() * 50);
+  const LIMIT = 50;
+  const OFFSET = Math.floor(Math.random() * 90);
 
   // Private methods
   const _getOAuthToken = async () => {
@@ -31,7 +31,7 @@ const APIController = (function() {
     let result; 
     try {
       result = await axios({
-        url: `https://api.spotify.com/v1/playlists/0OOCQaM7QnglpaHDRyucDg/tracks?market=ES&fields=items(track(name%2Cartists(name)))&limit=${LIMIT}&offset=${OFFSET}` ,
+        url: `https://api.spotify.com/v1/playlists/0OOCQaM7QnglpaHDRyucDg/tracks?market=ES&fields=items(track(name%2Chref%2Cartists(name)%2Calbum(name%2Cimages)))&limit=${LIMIT}&offset=${OFFSET}` ,
         method: 'GET',
         headers: { 
           'Authorization': `Bearer ${token}` 

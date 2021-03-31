@@ -64,7 +64,28 @@ export const homeData = {
 
 // ABOUT DATA
 export const aboutData = {
-  img: 'headshot-joe.png',
+  images: {
+    paragraphOne: [
+      {
+        alt: 'View of a big rock arch',
+        url: images.arches
+      },
+      {
+        alt: 'My point of view from a high climb looking down at climbing partners far below',
+        url: images.climbing0
+      },
+    ],
+    paragraphThree: [
+      {
+        alt: 'Childhood\'s End Vintage Book Cover',
+        url: images.childhoodsEnd
+      },
+      {
+        alt: 'Interstellar Movie Poster',
+        url: images.interstellar
+      },
+    ]
+  },
   paragraphs: [
     '<div>When I’m not <span class="emphasize">coding</span>, you can catch me adventuring in the outdoors. I enjoy <span class="emphasize">rock climbing, hiking and camping</span>. When it gets too cold, you can find me on the slopes <span class="emphasize">shredding powder</span> (greens/blues, not that good yet).</div>',
     '<div>Outside of being outside, I enjoy <span class="emphasize">playing video games, listening to music and watching movies</span>. Some of my favorite games include classic JRPG’s like <span class="emphasize">Final Fantasy 9 and Xenogears</span>.  I’m a huge jazz fan, but will listen to anything that sounds good. I have too many favorite artists to name, but a few people I have been listening to recently include … (checks notes) <span class="emphasize">{artists}</span>.</div>', 
