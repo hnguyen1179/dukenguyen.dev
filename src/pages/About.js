@@ -49,7 +49,15 @@ export default function About() {
   );
 
   const renderAlbumCovers = (
-    albumCovers.map(track => <img src={track.album.images[0].url} /> )
+    albumCovers.map(track => {
+      console.log(track)
+      return (
+        <img 
+          src={track.album.images[0].url} 
+          alt={`${track.album.name}'s Album Cover`} 
+        /> 
+      )
+    })
   );
 
   const renderBooksAndMovies = (
