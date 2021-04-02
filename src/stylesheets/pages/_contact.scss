@@ -11,7 +11,7 @@
 
             a {
                 color: $contact-color-2;
-                transition: 350ms ease-in-out;
+                transition: color 350ms ease-in-out;
 
                 &:hover {
                     color: white;

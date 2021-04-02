@@ -43,7 +43,6 @@
     }
     
     &__links {
-      // width: 50%;
       height: 3rem;
       width: max(340px, 100%);
       margin-right: 2rem;
@@ -130,7 +129,7 @@
           background-color: white;
           width: 30%;
           z-index: -1;
-          transition: 200ms ease-in-out;
+          transition: transform 200ms ease-in-out;
 
           &__container {
             display: flex;
@@ -143,7 +142,7 @@
               font-family: $titleFont;
               font-size: clamp(1.1rem, 0.6385rem + 2.0513vw, 1.6rem);             
               margin-bottom: 2.5rem;
-              transition: 350ms ease-in-out;
+              transition: color 350ms ease-in-out;
 
               &:hover {
                 color: #db806c;
