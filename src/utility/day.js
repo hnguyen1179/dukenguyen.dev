@@ -1,11 +1,11 @@
 const WEEK = [
+  'Sunday',
   'Monday',
   'Tuesday',
   'Wednesday',
   'Thursday',
   'Friday',
   'Saturday',
-  'Sunday'
 ]
 
 export const currentDay = () => {
@@ -21,6 +21,8 @@ export const currentDay = () => {
     timeOfDay = 'night';
   }
 
-  return WEEK[date.getDay() - 1] + " " + timeOfDay;
+  console.log(WEEK[date.getDay() - 1])
+
+  return WEEK[date.getDay()] + " " + timeOfDay;
 }
 
