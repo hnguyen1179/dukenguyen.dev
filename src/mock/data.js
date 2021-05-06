@@ -168,7 +168,7 @@ export const footerData = {
     {
       id: uuidv1(),
       name: 'github',
-      nameProper: 'Github',
+      nameProper: 'GitHub',
       url: 'https://github.com/hnguyen1179',
       brand: true
     },
