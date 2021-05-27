@@ -21,8 +21,6 @@ export const currentDay = () => {
     timeOfDay = 'night';
   }
 
-  console.log(WEEK[date.getDay() - 1])
-
   return WEEK[date.getDay()] + " " + timeOfDay;
 }
 

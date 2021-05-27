@@ -20,7 +20,6 @@ const APIController = (function() {
         data: 'grant_type=client_credentials&scope=user-top-read'
       })
     } catch(e) {
-      console.log("AXIOS POST ERROR: ", e)
     }
 
     const data = result.data
@@ -38,7 +37,6 @@ const APIController = (function() {
         }
       });
     } catch (e) {
-      console.log('ERROR: ', e)
     }
 
     const data = result.data.items;

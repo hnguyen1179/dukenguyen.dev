@@ -2,6 +2,8 @@ import logo from './qr-code.svg';
 import nameSvg from './DukeNguyen.svg';
 import portrait from './duke-nguyen-portrait.jpeg';
 import resume from './duke-nguyen-resume.pdf';
+import rcMp4 from './react-colors.mp4';
+import rcWebm from './react-colors.webm';
 import cellMp4 from './01.mp4';
 import cellWebm from './01.webm';
 import monkeMp4 from './02.mp4';
@@ -19,9 +21,11 @@ const images = {
   sevilleMp4,
   monkeMp4,
   cellMp4,
+  rcMp4,
   sevilleWebm,
   monkeWebm,
   cellWebm,
+  rcWebm,
   portrait,
   resume,
   climbing0,
@@ -31,3 +35,4 @@ const images = {
 }
 
 export default images;
+

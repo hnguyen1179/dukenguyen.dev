@@ -50,7 +50,6 @@ export default function About() {
 
   const renderAlbumCovers = (
     albumCovers.map(track => {
-      console.log(track)
       return (
         <img 
           src={track.album.images[0].url} 
