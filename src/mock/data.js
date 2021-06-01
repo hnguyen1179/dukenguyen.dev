@@ -51,8 +51,9 @@ export const titleData = {
 export const homeData = {
     headshotPath: "/duke-nguyen-portrait.jpeg",
     paragraphs: [
-        "I’m a frontend developer based out of the San Francisco Bay Area.",
+        "I’m a frontend developer based out of the San Francisco Bay Area. I specialize in React based web applications, but am always open to learn new technologies.", 
         "I have a passion for tackling challenging problems in and out of the workplace—the tougher the problem, the more enjoyment I get out of solving it.",
+        "I'm currently looking for a job within the Bay Area or anywhere within the US, remotely. If interested, please visit my Contact page and we can get in touch.",
         `Thanks for checking out my personal site. I hope you have a great ${currentDay()}!`,
     ],
     images: {
