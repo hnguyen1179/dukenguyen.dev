@@ -1,68 +1,84 @@
 .Project {
-  margin: 1.5rem 0rem;
-  padding-top: 0.5rem;
-  padding-bottom: 1.5rem;
-  color: $projects-color;
+    margin: 1.5rem 0rem;
+    color: $projects-color;
+    border-radius: 1rem;
+    padding: 1rem 0;
 
-  &:first-child {
-    margin-top: 0;
-  }
-  &:last-child {
-    border-bottom: 0;
-  }
-
-  &__title {
-    font-family: $titleFont;
-    font-size: clamp(2.1rem, 1.9333rem + 0.7407vw, 2.6rem);    
-    margin-left: 0.3rem;
-  }
-
-  &__paragraphs {
-    font-family: $paragraphFont;
-    color: $projects-color-2;
-    font-size: clamp(1.1rem, 0.9000rem + 0.8889vw, 1.7rem);    
-    margin-bottom: 1rem;
-    max-width: 730px;
-    margin-left: 0.3rem;
-
-    p:last-child {
-      margin-top: 0.5rem;
+    &:first-child {
+        margin-top: 0;
     }
-  }
-
-  &__video {
-    width: min(600px, 100%);
-    border: 5px solid white;
-    background-color: white;
-    margin: 0;
-    padding: 0;
-  }
-
-  &__links a {
-    color: $projects-color-2;
-    font-size: clamp(1.2rem, 1.1000rem + 0.4444vw, 1.5rem);    
-    font-weight: 700;
-    margin-right: 1rem;
-    position: relative;
-    margin-left: 0.3rem;
-
-    &:hover {
-      color: white;
-      transition: 350ms;
+    &:last-child {
+        border-bottom: 0;
     }
-  }
+
+    &__title {
+        a {
+            color: $projects-color;
+            font-family: $titleFont;
+            font-size: clamp(1.75rem, 1.5rem + 1.1111vw, 2.5rem);
+            margin-left: 0.3rem;
+            transition: color 200ms;
+
+            &:hover {
+                transition: color 200ms;
+                color: white;
+            }
+        }
+    }
+
+    &__paragraphs {
+        font-family: $paragraphFont;
+        color: $projects-color-2;
+        font-size: clamp(1.1rem, 0.9rem + 0.8889vw, 1.7rem);
+        margin-bottom: 1rem;
+        max-width: 750px;
+        margin-left: 0.3rem;
+
+        p:last-child {
+            margin-top: 0.5rem;
+        }
+    }
+
+    &__video {
+        width: min(700px, 100%);
+        border: 5px solid white;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__links a {
+        color: $projects-color-2;
+        font-size: clamp(1.2rem, 1.1rem + 0.4444vw, 1.5rem);
+        font-weight: 700;
+        margin-right: 1rem;
+        position: relative;
+        margin-left: 0.3rem;
+        transition: color 200ms;
+
+        &:hover {
+            color: white;
+            transition: color 200ms;
+        }
+    }
+
+    &:first-child {
+        margin-top: 1rem;
+    }
 }
 
 @media screen and (max-width: 500px) {
-  .Project {
-    &__title {
-      margin-left:0;
+    .Project {
+        &__title {
+            a {
+                margin-left: 0;
+            }
+        }
+        &__paragraphs {
+            margin-left: 0;
+        }
+        &__links a {
+            margin-left: 0;
+        }
     }
-    &__paragraphs {
-      margin-left: 0;
-    }
-    &__links a {
-      margin-left: 0;
-    }
-  }
 }
