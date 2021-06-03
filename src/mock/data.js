@@ -142,7 +142,7 @@ export const projectsData = {
             id: uuidv1(),
             title: "Cellular Automata",
             paragraphs: [
-                'Cellular automata (plural) are discrete, abstract computational systems that are useful in helping simulate general models of "complex systems", such as forest fires, traffic, and urbawn sprawl.',
+                'Cellular automata (plural) are discrete, abstract computational systems that are useful in helping simulate general models of "complex systems", such as forest fires, traffic, and urbawn sprawl',
                 "This passion project, which utilizes plain JS, HTML and CSS along the d3.js library, is a visual journal that describes the duality of how simple these systems can be on a micro scale and, conversely, how intricate they can be within a macro scale",
             ],
             url: "https://hnguyen1179.github.io/cellular-automata/",
