@@ -29,7 +29,7 @@ export default function Home() {
                     {homeData.paragraphs.map((paragraph) => (
                         <p
                             className="Home__main__paragraph"
-                            key={paragraph.length}
+                            key={paragraph[5]}
                         >
                             {paragraph}
                         </p>
