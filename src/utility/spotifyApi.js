@@ -1,67 +1,78 @@
-import axios from "axios";
+import querystring from 'querystring';
+
+const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
+const REFRESH_TOKEN = process.env.REACT_APP_REFRESH_TOKEN;
+
+const ACCESS_TOKEN_ENDPOINT = "https://accounts.spotify.com/api/token";
+const BASIC = "Basic " + btoa(CLIENT_ID + ":" + CLIENT_SECRET);
+
+const TOP_TRACKS_ENDPOINT = "https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=4";
+const TOP_ARTISTS_ENDPOINT = "https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=4";
 
 const APIController = (function () {
-    const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
-    const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
-    const LIMIT = 50;
-    const OFFSET = Math.floor(Math.random() * 90);
-
     // Private methods
-    const _getOAuthToken = async () => {
-        let result;
-        try {
-            result = await axios({
-                url: "https://accounts.spotify.com/api/token",
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded",
-                    Authorization:
-                        "Basic " + btoa(CLIENT_ID + ":" + CLIENT_SECRET),
-                },
-                data: "grant_type=client_credentials",
-            });
-        } catch (e) {}
+    const _getAccessToken = async () => {
+        const response = await fetch(ACCESS_TOKEN_ENDPOINT, {
+            method: "POST",
+            headers: {
+                Authorization: BASIC,
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: querystring.stringify({
+                grant_type: "refresh_token",
+                refresh_token: REFRESH_TOKEN
+            })
+        });        
 
-        const data = result.data;
-        return data.access_token;
+        return response.json()
     };
 
-    const _getTopArtistsAndSongs = async (token) => {
-        let result;
-        try {
-            result = await axios({
-                url: `https://api.spotify.com/v1/playlists/0OOCQaM7QnglpaHDRyucDg/tracks?market=ES&fields=items(track(name%2Chref%2Cartists(name)%2Calbum(name%2Cimages)))&limit=${LIMIT}&offset=${OFFSET}`,
-                method: "GET",
+    const _getTopTracks = async (accessToken) => {
+        const response = await fetch(TOP_TRACKS_ENDPOINT, {
+            headers: {
+                Authorization: `Bearer ${accessToken}`,
+            },
+        });
+
+        return response.json();
+    };
+
+    const _getTopArtists = async (accessToken) => {
+        const response = await fetch(TOP_ARTISTS_ENDPOINT, {
                 headers: {
-                    Authorization: `Bearer ${token}`,
+                    Authorization: `Bearer ${accessToken}`,
                 },
             });
-        } catch (e) {}
-
-        const data = result.data.items;
-        return data;
-    };
+        
+        return response.json();
+    }
 
     return {
-        getOAuthToken() {
-            return _getOAuthToken();
+        getAccessToken() {
+            return _getAccessToken();
         },
-        getTopArtistsAndSongs(token) {
-            return _getTopArtistsAndSongs(token);
+        getTopTracks(accessToken) {
+            return _getTopTracks(accessToken);
         },
+        getTopArtists(accessToken) {
+            return _getTopArtists(accessToken);
+        }
     };
 })();
 
 const APPController = (function (APICtrl) {
-    const topArtistsAndSongs = async () => {
-        const OAuthToken = await APICtrl.getOAuthToken();
-        const topArtists = await APICtrl.getTopArtistsAndSongs(OAuthToken);
-        return topArtists;
+    const getSpotifyData = async () => {
+        const { access_token: accessToken } = await APICtrl.getAccessToken();
+        const { items: topTracks } = await APICtrl.getTopTracks(accessToken);
+        const { items: topArtists } = await APICtrl.getTopArtists(accessToken);
+
+        return [topTracks, topArtists];
     };
 
     return {
         getData() {
-            return topArtistsAndSongs();
+            return getSpotifyData();
         },
     };
 })(APIController);

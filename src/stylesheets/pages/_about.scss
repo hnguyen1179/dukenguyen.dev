@@ -23,8 +23,31 @@
           justify-content: flex-start;
           align-items: flex-start;
 
-          &--0 {
+          &--1 {
             width: 100%;
+          }
+
+          &--2 {
+            a {
+              box-sizing: border-box;
+              width: 45%;
+              margin: 1%;
+
+              &:first-child,
+              &:nth-child(3) {
+                margin-left: 0;
+              }
+
+              img {
+                border: 5px solid white;
+                width: 100%;
+
+                &:hover {
+                  transition: border 200ms;
+                  border: 5px solid black;
+                }
+              }
+            }
           }
           
           img {

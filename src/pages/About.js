@@ -6,56 +6,48 @@ import APPController from "../utility/spotifyApi";
 
 export default function About() {
     const { aboutData } = useContext(PortfolioContext);
-    // const [artists, setArtists] = useState("uhhhhh");
-    // const [albumCovers, setAlbumCovers] = useState([]);
+    const [artists, setArtists] = useState("uhhhhh");
+    const [albumCovers, setAlbumCovers] = useState([]);
 
-    // useEffect(() => {
-    //     try {
-    //         const artists = APPController.getData();
-    //         const nextAlbumCovers = [];
-    //         artists.then((results) => {
-    //             const threeArtists = new Set();
-    //             while (threeArtists.size < 4) {
-    //                 const randomNum = Math.floor(
-    //                     Math.random() * results.length
-    //                 );
-    //                 const artistName = results[randomNum].track.artists[0].name;
-    //                 const track = results[randomNum].track;
-    //                 if (canPush(track, nextAlbumCovers)) {
-    //                     nextAlbumCovers.push(track);
-    //                 }
-    //                 threeArtists.add(artistName);
-    //             }
-    //             const str = Array.from(threeArtists);
-    //             str[3] = "and " + str[3];
-    //             setAlbumCovers(nextAlbumCovers);
-    //             setArtists(str.join(", "));
-    //         });
-    //     } catch (e) {
-    //         setArtists("uhhh, I can't think right now");
-    //     }
-    // }, []);
+    useEffect(() => {
+        try {
+            const getData = async () => {
+                const [topTracks, topArtists] = await APPController.getData();
+                
+                // Setting up top artists
+                const topArtistNames = topArtists.map(obj => obj.name);
+                topArtistNames[3] = "and " + topArtistNames[3] + ".";
+                const formattedArtists = topArtistNames.join(", ")
+                setArtists(formattedArtists);
+    
+                // Setting up top tracks
+                setAlbumCovers(topTracks);
+            }
 
-    // const canPush = (track, albumArray) => {
-    //     const duplicateArtists = albumArray.filter((albumItem) => {
-    //         return albumItem.artists[0].name === track.artists[0].name;
-    //     });
-    //     return duplicateArtists.length === 0;
-    // };
+            getData();
+        } catch (e) {
+            setArtists("uhhh, I can't think right now. (My code's erroring out! I'll fix this soon)");
+        }
+    }, []);
 
     const renderOutdoors = aboutData.images.paragraphOne.map((image) => (
         <img key={image.alt} src={image.url} alt={image.alt} />
     ));
 
-    // const renderAlbumCovers = albumCovers.map((track) => {
-    //     return (
-    //         <img
-    //             key={track.album.name}
-    //             src={track.album.images[0].url}
-    //             alt={`${track.album.name}'s Album Cover`}
-    //         />
-    //     );
-    // });
+    const renderAlbumCovers = albumCovers.map((track) => {
+        return (
+            <a
+                href={track.external_urls.spotify}
+                target="_blank" key={track.album.name}
+                rel="noreferrer"
+            >
+                <img
+                    src={track.album.images[0].url}
+                    alt={`${track.album.name}'s Album Cover`}
+                />
+            </a>
+        );
+    });
 
     const renderBooksAndMovies = aboutData.images.paragraphThree.map(
         (image) => <img key={image.alt} src={image.url} alt={image.alt} />
@@ -75,15 +67,19 @@ export default function About() {
                                 key={paragraph.length}
                                 className={`About__main__paragraphs__content__paragraph About__main__paragraphs__content__paragraph--${idx}`}
                                 dangerouslySetInnerHTML={{
-                                    __html: paragraph
+                                    // __html: paragraph,
+                                    __html: paragraph.replace(
+                                        /\{artists\}/,
+                                        artists
+                                    ),
                                 }}
                             />
                             <div
                                 className={`About__main__paragraphs__content__media About__main__paragraphs__content__media--${idx}`}
                             >
-                                {idx === 0 ? renderOutdoors : null}
-                                {/* {idx === 1 ? renderAlbumCovers : null} */}
-                                {idx === 2 ? renderBooksAndMovies : null}
+                                {idx === 1 ? renderOutdoors : null}
+                                {idx === 2 ? renderAlbumCovers : null}
+                                {idx === 3 ? renderBooksAndMovies : null}
                             </div>
                         </div>
                     ))}

@@ -13,8 +13,10 @@
   padding-left: min(5rem, 12.5%);
   padding-right: 3%;
   top: 3vw;
+  pointer-events: none;
 
   a {
+    pointer-events: auto;
     width: 5%;
     min-width: 45px;
     max-width: 100px;
@@ -33,6 +35,7 @@
   }
 
   &__navigation {
+    pointer-events: auto;
     display: flex;
     justify-content: flex-end;
     align-items: center;
