@@ -7,7 +7,7 @@ const REFRESH_TOKEN = process.env.REACT_APP_REFRESH_TOKEN;
 const ACCESS_TOKEN_ENDPOINT = "https://accounts.spotify.com/api/token";
 const BASIC = "Basic " + btoa(CLIENT_ID + ":" + CLIENT_SECRET);
 
-const TOP_TRACKS_ENDPOINT = "https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=4";
+const TOP_TRACKS_ENDPOINT = "https://api.spotify.com/v1/me/top/tracks?time_range=long_term&limit=50";
 const TOP_ARTISTS_ENDPOINT = "https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=4";
 
 const APIController = (function () {

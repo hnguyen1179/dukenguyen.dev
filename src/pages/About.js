@@ -21,7 +21,12 @@ export default function About() {
                 setArtists(formattedArtists);
     
                 // Setting up top tracks
-                setAlbumCovers(topTracks);
+                const randomFourTracks = [];
+                for (let i = 0; i < 4; i++) {
+                    const index = Math.floor(Math.random() * 50);
+                    randomFourTracks.push(topTracks[index])
+                }
+                setAlbumCovers(randomFourTracks);
             }
 
             getData();
