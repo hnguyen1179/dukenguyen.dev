@@ -13,25 +13,29 @@ export default function About() {
         try {
             const getData = async () => {
                 const [topTracks, topArtists] = await APPController.getData();
-                
+
                 // Setting up top artists
-                const topArtistNames = topArtists.map(obj => obj.name);
+                const topArtistNames = topArtists.map((obj) => obj.name);
                 topArtistNames[3] = "and " + topArtistNames[3] + ".";
-                const formattedArtists = topArtistNames.join(", ")
+                const formattedArtists = topArtistNames.join(", ");
                 setArtists(formattedArtists);
-    
+
                 // Setting up top tracks
                 const randomFourTracks = [];
-                for (let i = 0; i < 4; i++) {
+                while (randomFourTracks.length < 4) {
                     const index = Math.floor(Math.random() * 50);
-                    randomFourTracks.push(topTracks[index])
+                    if (randomFourTracks.includes(index)) continue;
+                    randomFourTracks.push(index);
                 }
-                setAlbumCovers(randomFourTracks);
-            }
+
+                setAlbumCovers(randomFourTracks.map((idx) => topTracks[idx]));
+            };
 
             getData();
         } catch (e) {
-            setArtists("uhhh, I can't think right now. (My code's erroring out! I'll fix this soon)");
+            setArtists(
+                "uhhh, I can't think right now. (My code's erroring out! I'll fix this soon)"
+            );
         }
     }, []);
 
@@ -40,16 +44,21 @@ export default function About() {
     ));
 
     const renderAlbumCovers = albumCovers.map((track) => {
+        console.log(track);
         return (
             <a
                 href={track.external_urls.spotify}
-                target="_blank" key={track.album.name}
+                target="_blank"
+                key={track.album.name}
                 rel="noreferrer"
             >
                 <img
                     src={track.album.images[0].url}
                     alt={`${track.album.name}'s Album Cover`}
                 />
+                <div className="track-info">
+                    {`${track.name} by ${track.artists[0].name}`}
+                </div>
             </a>
         );
     });
