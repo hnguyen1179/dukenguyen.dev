@@ -27,10 +27,7 @@ export default function Home() {
                 <h1 style={{ display: "none" }}>Duke Nguyen</h1>
                 <section>
                     {homeData.paragraphs.map((paragraph) => (
-                        <p
-                            className="Home__main__paragraph"
-                            key={paragraph[5]}
-                        >
+                        <p className="Home__main__paragraph" key={paragraph[5]}>
                             {paragraph}
                         </p>
                     ))}
