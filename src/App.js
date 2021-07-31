@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Switch, Route, useLocation, Redirect } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
@@ -25,6 +25,7 @@ import "./stylesheets/main.scss";
 
 export default function App() {
 	const location = useLocation();
+	const initialHomeLoad = "initialLoad" in sessionStorage ? false : true;
 
 	window.onbeforeunload = function () {
 		window.scrollTo({ top: 0, behavior: "smooth" });
@@ -47,7 +48,7 @@ export default function App() {
 				<div className="App__bar App__bar--bottom" />
 				<div className="App__bar App__bar--left" />
 
-				<Header />
+				<Header initialHomeLoad={initialHomeLoad} />
 
 				<TransitionGroup component={null}>
 					<CSSTransition
