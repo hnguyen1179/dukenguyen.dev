@@ -19,6 +19,7 @@ export default function Header({ initialHomeLoad }) {
 			}}
 			animate={{
 				opacity: 1,
+				transitionProperty: "opacity",
 				transitionDelay: initialHomeLoad ? "1.25s" : "0s",
 				transitionDuration: "0.8s",
 			}}
