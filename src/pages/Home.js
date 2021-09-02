@@ -11,8 +11,8 @@ export default function Home({ setInitialHomeLoad }) {
 
 	useEffect(() => {
 		if (!("initialLoad" in sessionStorage)) {
-            sessionStorage.setItem("initialLoad", true);
-        }
+			sessionStorage.setItem("initialLoad", true);
+		}
 	}, [setInitialHomeLoad]);
 
 	return (
@@ -48,7 +48,7 @@ export default function Home({ setInitialHomeLoad }) {
 					color: "#af4818",
 					zIndex: 0,
 					transitionDelay: "1.25s",
-                    transitionDuration: "0.8s",
+					transitionDuration: "0.8s",
 				}}
 				className="Home__main page__content"
 			>
@@ -61,7 +61,8 @@ export default function Home({ setInitialHomeLoad }) {
 					))}
 				</section>
 			</motion.main>
-			<Footer />
+
+			<Footer introEffect={introEffect} />
 		</div>
 	);
 }
