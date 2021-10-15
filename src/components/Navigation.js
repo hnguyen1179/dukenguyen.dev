@@ -21,7 +21,7 @@ export default function Navigation({ headerData }) {
 	};
 
 	const handleCloseNavigation = (e) => {
-		if (showNav === true) setShowNav(false);
+		setShowNav(false);
 	};
 
 	const handleOpenNavigation = (e) => {

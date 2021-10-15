@@ -61,22 +61,21 @@
 			}
 
 			.overflow-container {
-        position: relative;
+				position: relative;
 				transform: translateX(110%);
 				transition: 350ms ease-in-out;
 
-        &::after {
-          position: absolute;
-          content: "";
-          inset: 0;
-          top: -0.4rem;
-          padding: 1.5rem;
-          z-index: -1;
+				&::after {
+					position: absolute;
+					content: "";
+					inset: 0;
+					top: -0.4rem;
+					padding: 1.5rem;
+					z-index: -1;
 
-          backdrop-filter: blur(5px); /* Chrome and Opera */
-          background-color: rgba(255, 255, 255, 0.392);
-
-        }
+					backdrop-filter: blur(5px); /* Chrome and Opera */
+					background-color: rgba(255, 255, 255, 0.392);
+				}
 			}
 
 			.link {
@@ -104,14 +103,14 @@
 			}
 
 			.link.activeLink {
-				color: rgb(255, 255, 255);
+				color: $main-color;
 				transition: 350ms ease-in-out;
 				pointer-events: none;
 			}
 
 			.link.activeLink::after,
 			.link.activeLink::before {
-				background: white;
+				background: $main-color;
 				bottom: -8px;
 				height: 0.25rem;
 				transition: bottom 300ms ease-in-out, height 300ms ease-in-out;
@@ -141,7 +140,8 @@
 					right: -30%;
 					top: 0;
 					height: 100vh;
-					background-color: white;
+					backdrop-filter: blur(5px); /* Chrome and Opera */
+					background-color: rgba(255, 255, 255, 0.392);
 					width: 30%;
 					z-index: -1;
 					transition: transform 200ms ease-in-out;
@@ -179,7 +179,6 @@
 				&--sidebar.show {
 					transform: translateX(-100%);
 					transition: 200ms ease-in-out;
-					box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.247);
 				}
 			}
 		}
