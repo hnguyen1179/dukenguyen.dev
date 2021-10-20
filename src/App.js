@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Switch, Route, useLocation, Redirect } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 

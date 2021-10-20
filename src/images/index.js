@@ -10,6 +10,8 @@ import monkeMp4 from './02.mp4';
 import monkeWebm from './02.webm';
 import sevilleMp4 from './03.mp4';
 import sevilleWebm from './03.webm';
+import notAirbnbMp4 from './04.mp4';
+import notAirbnbWebm from './04.webm';
 import climbing0 from './climbing-1.webp';
 import arches from './arches.webp';
 import interstellar from './interstellar.webp';
@@ -18,10 +20,12 @@ import childhoodsEnd from './childhoods-end.webp';
 const images = {
   logo,
   nameSvg,
+  notAirbnbMp4,
   sevilleMp4,
   monkeMp4,
   cellMp4,
   rcMp4,
+  notAirbnbWebm,
   sevilleWebm,
   monkeWebm,
   cellWebm,
