@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.f58662d3.chunk.css",
-    "main.js": "/static/js/main.fe2dd6ba.chunk.js",
-    "main.js.map": "/static/js/main.fe2dd6ba.chunk.js.map",
+    "main.js": "/static/js/main.5ef8fc6f.chunk.js",
+    "main.js.map": "/static/js/main.5ef8fc6f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d0a7a657.js",
     "runtime-main.js.map": "/static/js/runtime-main.d0a7a657.js.map",
     "static/js/2.67d01a71.chunk.js": "/static/js/2.67d01a71.chunk.js",
@@ -19,7 +19,7 @@
     "static/media/03.5658a162.mp4": "/static/media/03.5658a162.mp4",
     "static/media/03.df4a2438.webm": "/static/media/03.df4a2438.webm",
     "static/media/04.703cf05b.webm": "/static/media/04.703cf05b.webm",
-    "static/media/04.7e1027b3.mp4": "/static/media/04.7e1027b3.mp4",
+    "static/media/04.8f00707b.mp4": "/static/media/04.8f00707b.mp4",
     "static/media/DukeNguyen.d57df107.svg": "/static/media/DukeNguyen.d57df107.svg",
     "static/media/main.scss": "/static/media/NeueMontreal-Regular.140bfb4a.otf",
     "static/media/arches.22b9218d.webp": "/static/media/arches.22b9218d.webp",
@@ -36,6 +36,6 @@
     "static/js/runtime-main.d0a7a657.js",
     "static/js/2.67d01a71.chunk.js",
     "static/css/main.f58662d3.chunk.css",
-    "static/js/main.fe2dd6ba.chunk.js"
+    "static/js/main.5ef8fc6f.chunk.js"
   ]
 }
