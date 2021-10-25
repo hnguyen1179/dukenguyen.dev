@@ -6,6 +6,7 @@ import APPController from "../utility/spotifyApi";
 
 export default function About() {
 	const { aboutData } = useContext(PortfolioContext);
+	const [tracks, setTracks] = useState([]);
 	const [artists, setArtists] = useState("uhhhhh");
 	const [albumCovers, setAlbumCovers] = useState([]);
 
@@ -28,6 +29,7 @@ export default function About() {
 					randomFourTracks.push(index);
 				}
 
+				setTracks(topTracks);
 				setAlbumCovers(randomFourTracks.map((idx) => topTracks[idx]));
 			};
 
@@ -39,6 +41,20 @@ export default function About() {
 		}
 	}, []);
 
+	const resetAlbumCovers = () => {
+		// Setting up top tracks
+		const randomFourTracks = new Set();
+		while (randomFourTracks.size < 4) {
+			const index = Math.floor(Math.random() * 50);
+
+			randomFourTracks.add(index);
+		}
+
+		setAlbumCovers(
+			[...randomFourTracks].map((idx) => tracks[idx]).slice(0, 4)
+		);
+	};
+
 	const renderOutdoors = aboutData.images.paragraphOne.map((image) => (
 		<img key={image.alt} src={image.url} alt={image.alt} />
 	));
@@ -48,12 +64,12 @@ export default function About() {
 			<a
 				href={track.external_urls.spotify}
 				target="_blank"
-				key={track.album.name}
+				key={track.album.name + " " + track.name}
 				rel="noreferrer"
 			>
 				<img
 					src={track.album.images[0].url}
-					alt={`${track.album.name}'s Album Cover`}
+					alt={`${track.album.name}'s Album Cover. Track name is ${track.name}`}
 				/>
 				<div className="track-info">
 					{`${track.name} by ${track.artists[0].name}`}
@@ -80,13 +96,20 @@ export default function About() {
 								key={paragraph.length}
 								className={`About__main__paragraphs__content__paragraph About__main__paragraphs__content__paragraph--${idx}`}
 								dangerouslySetInnerHTML={{
-									// __html: paragraph,
 									__html: paragraph.replace(
 										/\{artists\}/,
 										artists
 									),
 								}}
 							/>
+							{idx === 2 ? (
+								<button
+									className="more-songs-button"
+									onClick={resetAlbumCovers}
+								>
+									<span>Randomize songs</span>
+								</button>
+							) : null}
 							<div
 								className={`About__main__paragraphs__content__media About__main__paragraphs__content__media--${idx}`}
 							>

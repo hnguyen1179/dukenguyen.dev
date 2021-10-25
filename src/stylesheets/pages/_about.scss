@@ -1,5 +1,4 @@
 .About + .Header {
-    
 }
 
 .About {
@@ -16,6 +15,39 @@
 
 		&__paragraphs {
 			&__content {
+				&--2 {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+
+					.more-songs-button {
+						margin: 1rem 0;
+						border: 0;
+						background-color: none;
+						padding: 1.25rem 2rem;
+						cursor: pointer;
+						width: 87%;
+						background-color: white;
+
+						&:hover {
+							transition: 200ms;
+							background-color: rgba(255, 255, 255, 0.495);
+							> span {
+								text-decoration: underline;
+							}
+						}
+
+						> span {
+							font-size: clamp(
+								1.05rem,
+								0.8333rem + 0.963vw,
+								1.7rem
+							);
+							display: inline-block;
+						}
+					}
+				}
+
 				&__paragraph {
 					font-size: clamp(1.05rem, 0.8333rem + 0.963vw, 1.7rem);
 					margin-bottom: 0.5rem;
@@ -47,15 +79,21 @@
 								margin-left: 0;
 							}
 
+							&:hover {
+								img {
+									transition: border 200ms;
+									border: 5px solid black;
+								}
+
+								.track-info {
+									text-decoration: underline;
+								}
+							}
+
 							img {
 								border: 5px solid white;
 								width: 100%;
 								height: 100%;
-
-								&:hover {
-									transition: border 200ms;
-									border: 5px solid black;
-								}
 							}
 
 							.track-info {
@@ -66,10 +104,6 @@
 								);
 								color: black;
 								text-align: center;
-
-								&:hover {
-									color: white;
-								}
 							}
 						}
 					}

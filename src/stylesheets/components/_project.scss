@@ -1,14 +1,16 @@
 .Project {
     margin: 1.5rem 0rem;
     color: $projects-color;
-    border-radius: 1rem;
     padding: 1rem 0;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #902a2a8c;
 
     &:first-child {
         margin-top: 0;
     }
     &:last-child {
         border-bottom: 0;
+        padding-bottom: 0;
     }
 
     &__title {
