@@ -104,6 +104,14 @@
 								);
 								color: black;
 								text-align: center;
+
+								> div:first-child {
+									font-weight: 600;
+								}
+
+								> div:last-child {
+									color: rgb(108, 108, 108);
+								}
 							}
 						}
 					}

@@ -59,6 +59,16 @@ export default function About() {
 		<img key={image.alt} src={image.url} alt={image.alt} />
 	));
 
+	const addNBSP = (str) => {
+		const arrayForm = str.split(" ");
+		return arrayForm.reduce((acc, cv, idx) => {
+			if (idx === arrayForm.length - 1) {
+				return acc + "\u00a0" + cv;
+			}
+			return acc + " " + cv;
+		}, "");
+	};
+
 	const renderAlbumCovers = albumCovers.map((track) => {
 		return (
 			<a
@@ -72,7 +82,8 @@ export default function About() {
 					alt={`${track.album.name}'s Album Cover. Track name is ${track.name}`}
 				/>
 				<div className="track-info">
-					{`${track.name} by ${track.artists[0].name}`}
+					<div>{addNBSP(track.name)}</div>
+					<div>{`${addNBSP(track.artists[0].name)}`}</div>
 				</div>
 			</a>
 		);
