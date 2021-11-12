@@ -69,7 +69,13 @@ const APPController = (function (APICtrl) {
 		const { items: topTracks } = await APICtrl.getTopTracks(accessToken);
 		const { items: topArtists } = await APICtrl.getTopArtists(accessToken);
 
-		return [topTracks, topArtists];
+		// Artist with explicit album covers
+		const bannedArtists = ["Teyana Taylor", "Blood Orange"];
+		const filteredTracks = topTracks.filter(
+			(track) => !bannedArtists.includes(track.artists[0].name)
+		);
+
+		return [filteredTracks, topArtists];
 	};
 
 	return {
