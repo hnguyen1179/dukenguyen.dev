@@ -51,7 +51,7 @@ export const titleData = {
 export const homeData = {
 	headshotPath: "/duke-nguyen-portrait.jpeg",
 	paragraphs: [
-		"I’m a web developer based out of Anaheim, California. I specialize in React-based web apps, but am always open to learn new technologies.",
+		"I’m a web developer with one year of experience working at an a16z-backed DeFi startup. I specialize in React-based web apps, but am always open to learning new technologies.",
 		"I have a passion for tackling challenging problems in and out of the workplace—the tougher the problem, the more enjoyment I get out of solving it.",
 		"I'm currently looking for a job within the NYC area or anywhere within the US remotely. If interested, please visit my Contact page and we can get in touch.",
 		`Thanks for checking out my personal site. I hope you have a great ${currentDay()}!`,
