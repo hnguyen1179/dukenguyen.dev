@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.ade83b0e.chunk.css",
-    "main.js": "/static/js/main.c1ab8a8a.chunk.js",
-    "main.js.map": "/static/js/main.c1ab8a8a.chunk.js.map",
+    "main.js": "/static/js/main.92dde65d.chunk.js",
+    "main.js.map": "/static/js/main.92dde65d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.29304480.js",
     "runtime-main.js.map": "/static/js/runtime-main.29304480.js.map",
     "static/js/2.e44bce88.chunk.js": "/static/js/2.e44bce88.chunk.js",
@@ -26,7 +26,7 @@
     "static/media/childhoods-end.6b0d28ce.webp": "/static/media/childhoods-end.6b0d28ce.webp",
     "static/media/climbing-1.4bc9032f.webp": "/static/media/climbing-1.4bc9032f.webp",
     "static/media/duke-nguyen-portrait.325f7c8a.jpeg": "/static/media/duke-nguyen-portrait.325f7c8a.jpeg",
-    "static/media/duke-nguyen-resume.f5ff717d.pdf": "/static/media/duke-nguyen-resume.f5ff717d.pdf",
+    "static/media/duke-nguyen-resume.6519be57.pdf": "/static/media/duke-nguyen-resume.6519be57.pdf",
     "static/media/interstellar.a4ed45b4.webp": "/static/media/interstellar.a4ed45b4.webp",
     "static/media/qr-code.d6705753.svg": "/static/media/qr-code.d6705753.svg",
     "static/media/react-colors.2e1379e8.webm": "/static/media/react-colors.2e1379e8.webm",
@@ -36,6 +36,6 @@
     "static/js/runtime-main.29304480.js",
     "static/js/2.e44bce88.chunk.js",
     "static/css/main.ade83b0e.chunk.css",
-    "static/js/main.c1ab8a8a.chunk.js"
+    "static/js/main.92dde65d.chunk.js"
   ]
 }
